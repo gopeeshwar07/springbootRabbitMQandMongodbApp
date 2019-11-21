@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class PayrollIntegrationPropertiesConfig {
-	@Value("${celergoRequest.exchange.name:testExchange}")
+	@Value("${rabbitmq.exchange.name:testExchange}")
 	private String celergoRequestExchange;
 
-	@Value("${celergoRequest.queue.name:testQueue}")
+	@Value("${rabbitmq.queue.name:testQueue}")
 	private String celergoRequestQueue;
 
-	@Value("${celergoRequest.routing.key:testKey}")
+	@Value("${rabbitmq.routing.key:testKey}")
 	private String celergoRequestRoutingKey;
 
 	@Value("${rabbitmq.port:5672}")
